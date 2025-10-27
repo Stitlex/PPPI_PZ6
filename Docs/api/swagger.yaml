@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: Project API
+  version: 1.0.0
+paths:
+  /add:
+    get:
+      summary: Add two numbers
+      parameters:
+        - name: num1
+          in: query
+          required: true
+          schema: { type: number }
+        - name: num2
+          in: query
+          required: true
+          schema: { type: number }
+      responses:
+        '200':
+          description: Sum of two numbers
+  /percent:
+    get:
+      summary: Calculate percent of number
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema: { type: number }
+        - name: percent
+          in: query
+          required: true
+          schema: { type: number }
+      responses:
+        '200':
+          description: Result of percent calculation
+  /discount:
+    get:
+      summary: Calculate price after discount
+      parameters:
+        - name: price
+          in: query
+          required: true
+          schema: { type: number }
+        - name: percent
+          in: query
+          required: true
+          schema: { type: number }
+      responses:
+        '200':
+          description: Final price after discount
