@@ -16,12 +16,15 @@ def discount(price, percent):
 if __name__ == "__main__":
     number1 = 20
     number2 = 25
+    number = 200
+    percent = 15
+    price = 1250
 
     result_sum = add(number1, number2)
     print(result_sum)
 
-    result_percent = percent_of(number1, number2)
+    result_percent = percent_of(number, percent)
     print(result_percent)
 
-    result = discount(number1, result_percent)
+    result = discount(price, result_percent)
     print(result)
